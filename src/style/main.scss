@@ -1,0 +1,69 @@
+@charset 'utf-8';
+
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "vendors/_bootstrap";
+@import "vendors/_font-awesome";
+@import "vendors/_hamburgers.min";
+@import "vendors/_slick";
+@import "vendors/_slick-theme";
+// @import "vendors/vendor_extensions/_bootstrap";
+// @import "vendors/vendor_extensions/_font-awesome";
+// @import "vendors/vendor_extensions/_hamburgers";
+// @import "vendors/vendor_extensions/_slick-theme";
+@import "base/_typography";
+// @import "layout/_header";
+@import "layout/_header";
+@import "layout/_main";
+@import "layout/_footer";
+@import "components/_sprite";
+@import "components/_buttons";
+@import "components/_text";
+
+@import "themes/_hero";
+@import "themes/_about";
+@import "themes/_benefit";
+@import "themes/_plan";
+@import "themes/_team";
+@import "themes/_contact";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 400;
+    background-color: #fff;
+    font-family: $default-font;
+    position: relative;
+
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-family: 'Micra', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+
+.block {
+    padding-top: 24px;
+    padding-bottom: 30px;
+}
+
+.head {
+    background: #acc1d4;
+}

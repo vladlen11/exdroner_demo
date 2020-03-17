@@ -1,0 +1,28 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/hero-bh.jpg");
+    min-height: 100vh;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    &__sub-title {
+        font-size: 38px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "Cinzel", sans-serif;
+        margin-bottom: 40px;
+        letter-spacing: 0.7px;
+    }
+
+    &__logo {
+
+    }
+}

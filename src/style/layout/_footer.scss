@@ -1,10 +1,32 @@
 .footer {
-  background: url("/img/footer-bg.jpg");
-  height: 315px;
-  display: flex;
-  align-items: center;
+    background: url("/img/footer-bg.jpg");
+    height: 315px;
+    display: flex;
+    align-items: center;
 
-  &__logo {
-    margin-left: 96px;
-  }
+    &__logo {
+        margin-left: 96px;
+    }
+}
+
+.footer-details {
+    background: url("/img/footer-bg.jpg");
+    height: 315px;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-left: 87px;
+        position: relative;
+      display: inline-block;
+    }
+
+    &__number {
+        font-size: 24px;
+        color: #fff;
+        position: absolute;
+        bottom: -8px;
+        right: 59px;
+
+    }
 }

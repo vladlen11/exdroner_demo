@@ -1,0 +1,141 @@
+.details {
+    .head {
+        &__top {
+            padding-left: 80px;
+            padding-top: 46px;
+            position: relative;
+            z-index: 100;
+
+            a {
+                display: inline-block;
+            }
+
+        }
+
+        &__dron {
+            background: url("../img/details-elips.png") 50%  no-repeat;
+            margin: -130px 0 -83px;
+        }
+    }
+    .specifications {
+        background: rgb(10,31,50);
+        background: linear-gradient(0deg, rgba(10,31,50,1) 0%, rgba(172,193,212,1) 100%);
+        padding: 80px 0;
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 10;
+            padding: 20px 0;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 460px;
+                height: 100%;
+                position: absolute;
+                left: -120px;
+                top: 0;
+                background-color: #f1f1f1;
+                opacity: .2;
+                z-index: -1;
+            }
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 460px;
+                height: 100%;
+                position: absolute;
+                right: -143px;
+                top: 0;
+                background-color: #f1f1f1;
+                opacity: .2;
+                z-index: -1;
+            }
+
+            &-data {
+                width: 100%;
+                flex: 1;
+                .drone{
+                    margin: 66px 0 50px 113px;
+                }
+
+                .tablet {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 785px;
+                    width: 100%;
+                    
+                    .marker {
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            background: #cbddfa;
+                            opacity: .21;
+                        }
+                    }
+
+                     &__row {
+                         display: flex;
+                         justify-content: space-between;
+                         padding-left: 50px;
+
+                         &-col {
+                             width: 50%;
+                             height: 48px;
+                             display: flex;
+                             align-items: center;
+
+                             &:first-child {
+                                 max-width: 314px;
+                                 width: 100%;
+                                 font-size: 18px;
+                                 color: #fff;
+                             }
+                             &:last-child {
+                                 font-size: 20px;
+                                 font-family: 'Micra', sans-serif;
+                                 color: #fff;
+                                 width: 100%;
+                                 padding-left: 20px;
+                             }
+                         }
+                     }
+                }
+            }
+
+            &-gallery {
+                max-width: 322px;
+                margin: 0 30px;
+                .item {
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    &__photo {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: inline-block;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

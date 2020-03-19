@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact" id="contact">
     <div class="container">
         <div class="row">
 
@@ -38,22 +38,22 @@
                         Or ask question
                     </h3>
 
-                    <form action="" class="question__form">
+                    <form class="question__form" action="send.php" method="post">
                         <label class="item">
                             <p class="item__title">Name</p>
-                            <input type="text">
+                            <input type="text" name="Name">
                         </label>
                         <label class="item">
                             <p class="item__title">Phone number</p>
-                            <input type="text">
+                            <input type="text" name="Phone">
                         </label>
                         <label class="item">
                             <p class="item__title">Email</p>
-                            <input type="text">
+                            <input type="text" name="Email">
                         </label>
                         <label class="item textarea">
                             <p class="item__title">Massage</p>
-                            <textarea name="" ></textarea>
+                            <textarea name="Message"  id="textarea"></textarea>
                         </label>
 
                             <button class="submit">

@@ -7,20 +7,20 @@
 	<title>exDroner</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="home">
 
  	<header class="header">
  	    <div class="container">
  	        <div class="row">
  	            <ul class="header__wrap">
  	                <li class="header-item">
- 	                    <a href="#" class="btm-menu"><span>Contact</span></a>
+ 	                    <a href="#" class="btn-header-menu"><span>Contact</span></a>
  	                </li>
  	                <li class="header-item">
- 	                    <a href="/details.html" class="btm-menu"><span>Technical details</span></a>
+ 	                    <a href="/details.html" class="btn-header-menu"><span>Technical details</span></a>
  	                </li>
  	                <li class="header-item">
- 	                    <a href="#" class="btm-menu"><span>Information</span></a>
+ 	                    <a href="#" class="btn-header-menu"><span>Information</span></a>
  	                </li>
  	            </ul>
  	        </div>
@@ -28,9 +28,27 @@
  	</header>
 
  	<section class="hero section">
+ 	    <div class="hero__wrap">
+ 	        <div class="container">
+ 	            <div class="row">
+ 	                <ul class="hero__menu">
+ 	                    <li class="hero__menu-item">
+ 	                        <a href="#contact" class="btm-menu show flowing-scroll"><span>Contact</span></a>
+ 	                    </li>
+ 	                    <li class="hero__menu-item">
+ 	                        <a href="/details.html" class="btm-menu show"><span>Technical details</span></a>
+ 	                    </li>
+ 	                    <li class="hero__menu-item">
+ 	                        <a href="#about" class="btm-menu show flowing-scroll"><span>Information</span></a>
+ 	                    </li>
+ 	
+ 	                </ul>
+ 	            </div>
+ 	        </div>
+ 	    </div>
  	    <div class="container">
  	        <div class="row">
- 	                <div class="hero__content">
+ 	            <div class="hero__content">
  	                    <p class="hero__sub-title">
  	                        Leave your trace for humanity
  	                    </p>
@@ -38,12 +56,11 @@
  	                        <img src="/img/logo-hero.png" alt="logo">
  	                    </div>
  	                </div>
- 	
  	        </div>
  	    </div>
  	</section>
 
- 	<section class="about section">
+ 	<section class="about section" id="about">
  	    <div class="container">
  	        <div class="row">
  	
@@ -413,7 +430,7 @@
  	    </div>
  	</section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="row">
     
@@ -453,22 +470,22 @@
                             Or ask question
                         </h3>
     
-                        <form action="" class="question__form">
+                        <form class="question__form" action="send.php" method="post">
                             <label class="item">
                                 <p class="item__title">Name</p>
-                                <input type="text">
+                                <input type="text" name="Name">
                             </label>
                             <label class="item">
                                 <p class="item__title">Phone number</p>
-                                <input type="text">
+                                <input type="text" name="Phone">
                             </label>
                             <label class="item">
                                 <p class="item__title">Email</p>
-                                <input type="text">
+                                <input type="text" name="Email">
                             </label>
                             <label class="item textarea">
                                 <p class="item__title">Massage</p>
-                                <textarea name="" ></textarea>
+                                <textarea name="Message"  id="textarea"></textarea>
                             </label>
     
                                 <button class="submit">

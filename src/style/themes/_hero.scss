@@ -5,7 +5,9 @@
     background: url("../img/hero-bh.jpg");
     min-height: 100vh;
     position: relative;
-
+    @include respond-to($tablet) {
+        background-position: 80% 50%;
+    }
     &__wrap {
         position: absolute;
         width: 100%;
@@ -70,9 +72,21 @@
         font-family: "Cinzel", sans-serif;
         margin-bottom: 40px;
         letter-spacing: 0.7px;
+        @include respond-to($tablet) {
+            font-size: 32px;
+            color: #001b48;
+            margin-bottom: 80px;
+        }
     }
 
     &__logo {
+        img {
+            max-width: 904px;
+            width: 100%;
+            @include respond-to($tablet) {
+                max-width: 600px;
+            }
+        }
 
     }
 }

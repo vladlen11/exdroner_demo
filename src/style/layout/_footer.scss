@@ -3,6 +3,9 @@
     height: 315px;
     display: flex;
     align-items: center;
+    @include respond-to($medium-max) {
+        height: 220px;
+    }
 
     &__logo {
         margin-left: 96px;

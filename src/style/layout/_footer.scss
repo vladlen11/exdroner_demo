@@ -1,15 +1,5 @@
 .footer {
-<<<<<<< HEAD
-  background: url("../img/footer-bg.jpg");
-  height: 315px;
-  display: flex;
-  align-items: center;
-
-  &__logo {
-    margin-left: 96px;
-  }
-=======
-    background: url("/img/footer-bg.jpg");
+    background: url("../img/footer-bg.jpg");
     height: 315px;
     display: flex;
     align-items: center;
@@ -20,7 +10,7 @@
 }
 
 .footer-details {
-    background: url("/img/footer-bg.jpg");
+    background: url("../img/footer-bg.jpg");
     height: 315px;
     display: flex;
     align-items: center;
@@ -39,5 +29,4 @@
         right: 59px;
 
     }
->>>>>>> master
 }

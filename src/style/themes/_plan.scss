@@ -21,6 +21,9 @@
             padding-top: 10px;
             margin-bottom: 0;
         }
+        @include respond-to($xs-max) {
+            padding: 0 20px;
+        }
         .desctop {
             @include respond-to($xs-max) {
                 display: none;
@@ -90,6 +93,9 @@
                max-width: 500px;
                 margin: 0 auto 30px;
                 border-left:  none;
+            }
+            @include respond-to($xs-max) {
+                padding: 0 20px;
             }
 
             .mob-wrap {
@@ -183,6 +189,9 @@
                 margin: 0 auto 70px;
                 padding: 34px 0 0;
             }
+            @include respond-to($xs-max) {
+                padding: 0 20px;
+            }
 
             &:before {
                 content: '';
@@ -219,6 +228,13 @@
                     height: 120px;
                     background-size: cover;
                     bottom: 50px;
+                    right: 40px;
+                    z-index: -1;
+                }
+                @include respond-to($xs-max) {
+                    width: 83px;
+                    height: 90px;
+                    bottom: 98px;
                     right: 40px;
                 }
 
@@ -273,6 +289,13 @@
                 }
                 @include respond-to($xs-max) {
                     font-size: 20px;
+                }
+                
+                br {
+                    display: none;
+                    @include respond-to($xs-max) {
+                        display: block;
+                    }
                 }
             }
 

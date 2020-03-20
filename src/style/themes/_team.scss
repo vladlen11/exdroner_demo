@@ -4,7 +4,9 @@
     padding-bottom: 200px;
     position: relative;
     z-index: 10;
-
+    @include respond-to($xs-max) {
+        padding-bottom:  0;
+    }
     &:before {
         content: '';
         position: absolute;
@@ -29,6 +31,11 @@
         @include respond-to($lg-1420-max) {
             height: 800px;
         }
+        @include respond-to($xs-max) {
+            height: 400px;
+            min-height: 0;
+            margin-bottom: 35px;
+        }
         .team__poster-dron-desctop {
             position: absolute;
             top: 49%;
@@ -37,11 +44,29 @@
                 left: 10%;
                 transform: translateY(-50%);
             }
+            @include respond-to($tablet) {
+                left: 0;
+            }
 
             img {
                 @include respond-to($lg-1420-max) {
                     max-width: 800px;
                     width: 100%;
+                }
+                @include respond-to($xs-max) {
+                   max-width: 500px;
+                }
+            }
+
+            .desctop {
+                @include respond-to($xs-max) {
+                    display: none;
+                }
+            }
+            .mob {
+                display: none;
+                @include respond-to($xs-max) {
+                    display: inline-block;
                 }
             }
         }
@@ -50,10 +75,52 @@
     &__title {
         margin: 0 auto 86px;
         text-align: center;
+        @include respond-to($xs-max) {
+            margin: 0 auto 25px;
+            padding: 0 20px;
+        }
+        img {
+            @include respond-to($xs-max) {
+               max-width: 500px;
+                width: 100%;
+            }
+        }
     }
     &__content {
         display: flex;
         flex-wrap: wrap;
+        @include respond-to($tablet) {
+            max-width: 500px;
+            margin: 0 auto;
+
+        }
+        @include respond-to($xs-max) {
+            padding: 0 20px;
+        }
+
+        & > div {
+            &:nth-child(1) {
+                @include respond-to($tablet) {
+                   order: 2;
+                }
+            }
+            &:nth-child(2) {
+                @include respond-to($tablet) {
+                    order: 1;
+                }
+            }
+            &:nth-child(3) {
+                @include respond-to($tablet) {
+                    order: 3;
+                }
+            }
+            &:nth-child(4) {
+                @include respond-to($tablet) {
+                    order: 4;
+                }
+            }
+        }
+
         .item {
             max-width: 430px;
             display: flex;
@@ -68,6 +135,15 @@
             @include respond-to($medium-max) {
                 width: calc(50% - 30px);
                 margin-left: 30px;
+            }
+            @include respond-to($tablet) {
+                width: 100%;
+                max-width: 100%;
+            }
+            @include respond-to($xs-max) {
+                flex-direction: column;
+                margin-left: 0;
+                margin-bottom: 85px;
             }
 
             &:before {
@@ -100,6 +176,12 @@
                     margin-right: 18px;
                     margin-left: -35px;
                 }
+                @include respond-to($xs-max) {
+                   position: absolute;
+                    top: -50px;
+                    left: 10px;
+                    margin: 0;
+                }
 
                 img {
                     width: 100%;
@@ -118,6 +200,25 @@
                     font-weight: 500;
                     display: flex;
                     justify-content: space-between;
+                    @include respond-to($xs-max) {
+                        padding-left: 145px;
+                        min-height: 100px;
+                        margin-bottom: 20px;
+                    }
+                    .quote {
+                        @include respond-to($xs-max) {
+                            position: absolute;
+                            right: 10px;
+                            top: -20px;
+                            opacity: .5 ;
+                            max-width: 40px;
+                        }
+                        img {
+                            @include respond-to($xs-max) {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
                 &-text {
                     font-size: 18px;
@@ -135,6 +236,12 @@
             @include respond-to($medium-max) {
                 width: calc(50% - 30px);
             }
+            @include respond-to($tablet) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 70px;
+                margin-left: 0;
+            }
 
             &__title {
                 font-size: 35px;
@@ -145,11 +252,17 @@
                 @include respond-to($medium-max) {
                     font-size: 28px;
                 }
+                @include respond-to($xs-max) {
+                    font-size: 20px;
+                }
             }
             &__text {
                 font-size: 18px;
                 color: #ffffff;
                 font-weight: 400;
+                @include respond-to($xs-max) {
+                    font-size: 16px;
+                }
             }
         }
 

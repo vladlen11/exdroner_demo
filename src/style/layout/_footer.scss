@@ -6,9 +6,24 @@
     @include respond-to($medium-max) {
         height: 220px;
     }
+    @include respond-to($xs-max) {
+        height: auto;
+    }
 
     &__logo {
         margin-left: 96px;
+        @include respond-to($xs-max) {
+            max-width: 480px;
+            width: 100%;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+        img {
+            @include respond-to($xs-max) {
+                max-width: 480px;
+                width: 100%;
+            }
+        }
     }
 }
 

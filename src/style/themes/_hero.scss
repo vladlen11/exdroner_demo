@@ -8,6 +8,9 @@
     @include respond-to($tablet) {
         background-position: 80% 50%;
     }
+    @include respond-to($xs-max) {
+        background-position: 63% 50%;
+    }
     &__wrap {
         position: absolute;
         width: 100%;
@@ -19,7 +22,9 @@
     }
 
     &__menu {
-
+        @include respond-to($xs-max) {
+            display: none;
+        }
 
         &-item {
             position: absolute;
@@ -77,14 +82,24 @@
             color: #001b48;
             margin-bottom: 80px;
         }
+        @include respond-to($xs-max) {
+            font-size: 23px;
+            text-align: center;
+        }
     }
 
     &__logo {
+        @include respond-to($xs-max) {
+            padding:  0 20px;
+        }
         img {
             max-width: 904px;
             width: 100%;
             @include respond-to($tablet) {
                 max-width: 600px;
+            }
+            @include respond-to($xs-max) {
+               max-width: 275px;
             }
         }
 

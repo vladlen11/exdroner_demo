@@ -18,6 +18,7 @@
             margin: 25px auto;
             padding: 0 20px;
         }
+
         img {
             @include respond-to($xs-max) {
                 max-width: 480px;
@@ -32,19 +33,56 @@
     height: 315px;
     display: flex;
     align-items: center;
+    @include respond-to($xs-max) {
+        background: #0a1f32;
+        height: 150px;
+    }
 
     &__logo {
         margin-left: 87px;
         position: relative;
-      display: inline-block;
+        display: inline-block;
+        @include respond-to($xs-max) {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        img {
+            @include respond-to($xs-max) {
+                max-width: 200px;
+                margin-bottom: 10px;
+            }
+
+        }
     }
 
     &__number {
-        font-size: 24px;
+        font-size: 22px;
         color: #fff;
         position: absolute;
-        bottom: -8px;
-        right: 59px;
+        bottom: -3px;
+        right: 70px;
+        text-decoration: none;
+        font-weight: 400;
+        letter-spacing: 1px;
+        @include respond-to($xs-max) {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+        }
 
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+
+        }
     }
 }

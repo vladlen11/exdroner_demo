@@ -1,13 +1,31 @@
 .details {
+    @include respond-to($tablet) {
+        background: #869ec1;
+    }
     .head {
+        @include respond-to($tablet) {
+            background: #869ec1;
+        }
         &__top {
             padding-left: 80px;
             padding-top: 46px;
             position: relative;
             z-index: 100;
-
+            @include respond-to($xs-max) {
+                padding-left: 38px;
+                padding-top: 20px;
+            }
             a {
                 display: inline-block;
+                @include respond-to($xs-max) {
+                    max-width: 200px;
+                }
+
+                img {
+                    @include respond-to($xs-max) {
+                        width: 100%;
+                    }
+                }
             }
 
         }
@@ -15,12 +33,27 @@
         &__dron {
             background: url("../img/details-elips.png") 50%  no-repeat;
             margin: -130px 0 -83px;
+            @include respond-to($tablet) {
+               background-size: contain;
+            }
+            @include respond-to($xs-max) {
+                margin: -27px 0 10px;
+            }
+            img {
+                width: 100%;
+            }
         }
     }
     .specifications {
         background: rgb(10,31,50);
         background: linear-gradient(0deg, rgba(10,31,50,1) 0%, rgba(172,193,212,1) 100%);
         padding: 80px 0;
+        width: 100%;
+        overflow: hidden;
+        @include respond-to($tablet) {
+            padding: 0;
+            background: #869ec1;
+        }
         &__content {
             display: flex;
             justify-content: space-between;
@@ -38,6 +71,9 @@
                 background-color: #f1f1f1;
                 opacity: .2;
                 z-index: -1;
+                @include respond-to($tablet) {
+                    display: none;
+                }
             }
             &:after {
                 content: '';
@@ -50,13 +86,28 @@
                 background-color: #f1f1f1;
                 opacity: .2;
                 z-index: -1;
+                @include respond-to($tablet) {
+                    display: none;
+                }
+            }
+
+            @include respond-to($tablet) {
+                flex-direction: column-reverse;
+                margin: 0 auto;
+                padding: 0;
             }
 
             &-data {
                 width: 100%;
                 flex: 1;
+                @include respond-to($tablet) {
+                    background: rgba(241,241,241,.2);
+                }
                 .drone{
                     margin: 66px 0 50px 113px;
+                    @include respond-to($tablet) {
+                        display: none;
+                    }
                 }
 
                 .tablet {
@@ -64,7 +115,12 @@
                     flex-direction: column;
                     max-width: 785px;
                     width: 100%;
-                    
+                    @include respond-to($tablet) {
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+
+
                     .marker {
                         position: relative;
 
@@ -79,6 +135,9 @@
                             right: 0;
                             background: #cbddfa;
                             opacity: .21;
+                            @include respond-to($xs-max) {
+                                display: none;
+                            }
                         }
                     }
 
@@ -86,18 +145,48 @@
                          display: flex;
                          justify-content: space-between;
                          padding-left: 50px;
-
+                         @include respond-to($tablet) {
+                             padding: 0 20px;
+                         }
+                         @include respond-to($xs-max) {
+                             padding: 7px 30px 3px;
+                             min-height: 50px;
+                         }
+                         &:nth-child(2){
+                             @include respond-to($xs-max) {
+                                 background: rgba(10,31,50,.5) ;
+                             }
+                            
+                         }
+                         &:nth-child(4){
+                             @include respond-to($xs-max) {
+                                 background: rgba(10,31,50,.5) ;
+                             }
+                         }
+                         &:nth-child(7){
+                             @include respond-to($xs-max) {
+                                 background: rgba(10,31,50,.5) ;
+                             }
+                         }
                          &-col {
                              width: 50%;
                              height: 48px;
                              display: flex;
                              align-items: center;
-
+                             @include respond-to($xs-max) {
+                                 height: auto;
+                                 width: calc(50% - 10px);
+                                 align-items: flex-start;
+                             }
                              &:first-child {
                                  max-width: 314px;
                                  width: 100%;
                                  font-size: 18px;
                                  color: #fff;
+                                 @include respond-to($xs-max) {
+                                     font-size: 15px;
+                                     width: calc(50% - 10px);
+                                 }
                              }
                              &:last-child {
                                  font-size: 20px;
@@ -105,6 +194,16 @@
                                  color: #fff;
                                  width: 100%;
                                  padding-left: 20px;
+                                 text-transform: uppercase;
+                                 @include respond-to($tablet) {
+                                     padding-left: 0;
+                                 }
+                                 @include respond-to($xs-max) {
+                                     font-size: 15px;
+                                     text-transform: inherit;
+                                     font-family: "Roboto", sans-serif;
+                                     width: calc(50% - 10px);
+                                 }
                              }
                          }
                      }
@@ -114,10 +213,30 @@
             &-gallery {
                 max-width: 322px;
                 margin: 0 30px;
+                @include respond-to($tablet) {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                @include respond-to($xs-max) {
+                    padding: 0 20px;
+                    margin-bottom: 5px;
+                }
+
                 .item {
                     position: relative;
                     overflow: hidden;
                     margin-bottom: 20px;
+                    @include respond-to($tablet) {
+                        width: calc(50% - 20px);
+                    }
+                    @include respond-to($xs-max) {
+                        width: calc(50% - 10px);
+                        margin-bottom: 10px;
+                    }
 
                     &__photo {
                         position: absolute;
@@ -132,6 +251,10 @@
                             height: 100%;
                             object-fit: cover;
                         }
+                    }
+
+                    .empty {
+                        width: 100%;
                     }
                 }
             }

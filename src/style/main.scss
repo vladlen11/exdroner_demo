@@ -3,11 +3,11 @@
 @import "helpers/_variables";
 @import "helpers/_mixins";
 @import "vendors/_bootstrap";
-@import "vendors/_font-awesome";
-@import "vendors/_hamburgers.min";
-@import "vendors/_slick";
-@import "vendors/_slick-theme";
-// @import "vendors/vendor_extensions/_bootstrap";
+//@import "vendors/_font-awesome";
+//@import "vendors/_hamburgers.min";
+//@import "vendors/_slick";
+//@import "vendors/_slick-theme";
+ @import "vendors/vendor_extensions/_bootstrap";
 // @import "vendors/vendor_extensions/_font-awesome";
 // @import "vendors/vendor_extensions/_hamburgers";
 // @import "vendors/vendor_extensions/_slick-theme";
@@ -65,8 +65,4 @@ h2 {
 .block {
     padding-top: 24px;
     padding-bottom: 30px;
-}
-
-.head {
-    background: #acc1d4;
 }

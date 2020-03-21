@@ -2,6 +2,8 @@
     background: url("../img/about-3-bg.jpg");
     padding: 92px 0;
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     @include respond-to($tablet) {
         background: transparent;
         padding-bottom: 0;

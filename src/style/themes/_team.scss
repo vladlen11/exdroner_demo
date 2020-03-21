@@ -18,11 +18,16 @@
         background: url("../img/team-tuman.png") 71% -500px no-repeat;
         background-size: cover;
         z-index: -1;
+        @include respond-to($xs-max) {
+            background: url("../img/team-bg-mob.jpg") 0px 399px repeat-x;
+        }
     }
 
     &__poster {
         display: flex;
         background: url("../img/team-poster.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         min-height: 100vh;
         height: 1080px;
         width: 100%;
@@ -46,6 +51,9 @@
             }
             @include respond-to($tablet) {
                 left: 0;
+            }
+            @include respond-to($xs-max) {
+                top: 69%;
             }
 
             img {
@@ -143,7 +151,8 @@
             @include respond-to($xs-max) {
                 flex-direction: column;
                 margin-left: 0;
-                margin-bottom: 85px;
+                margin-bottom: 64px;
+                padding-top: 32px;
             }
 
             &:before {
@@ -181,6 +190,8 @@
                     top: -50px;
                     left: 10px;
                     margin: 0;
+                    width: 126px;
+                    height: 150px;
                 }
 
                 img {
@@ -201,8 +212,8 @@
                     display: flex;
                     justify-content: space-between;
                     @include respond-to($xs-max) {
-                        padding-left: 145px;
-                        min-height: 100px;
+                        padding-left: 134px;
+                        min-height: 68px;
                         margin-bottom: 20px;
                     }
                     .quote {
@@ -239,7 +250,7 @@
             @include respond-to($tablet) {
                 width: 100%;
                 max-width: 100%;
-                margin-bottom: 70px;
+                margin-bottom: 140px;
                 margin-left: 0;
             }
 
@@ -254,6 +265,8 @@
                 }
                 @include respond-to($xs-max) {
                     font-size: 20px;
+                    padding-left: 23px;
+                    margin-bottom: 35px;
                 }
             }
             &__text {

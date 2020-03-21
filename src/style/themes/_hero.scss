@@ -3,18 +3,34 @@
     align-items: center;
     justify-content: center;
     background: url("../img/hero-bh.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
     @include respond-to($tablet) {
         background-position: 80% 50%;
     }
     @include respond-to($xs-max) {
-        background-position: 63% 50%;
+        //background-position: 63% 50%;
+        background-position: 69% 100%;
+        background: url("../img/hero-bg-mob.jpg");
     }
     &__wrap {
         position: absolute;
         width: 100%;
         height: 100%;
+        @include respond-to($tablet) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding: 0 20px;
+        }
+
+        .container {
+            @include respond-to($tablet) {
+                width: 100%;
+            }
+        }
     }
 
     .row {
@@ -22,8 +38,9 @@
     }
 
     &__menu {
-        @include respond-to($xs-max) {
-            display: none;
+        @include respond-to($tablet) {
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         &-item {
@@ -31,28 +48,62 @@
             transform: translateX(-50%);
             top: 100px;
             transition: all .2s;
+            z-index: 100;
+            @include respond-to($tablet) {
+                top: inherit;
+                position: relative;
+                transform: translateX(0);
+                margin-bottom: 30px;
+            }
+
 
             &:nth-child(1) {
                 top: 172px;
+                @include respond-to($tablet) {
+                    top: inherit;
+                }
             }
             &:nth-child(2) {
                 top: 332px;
+                @include respond-to($tablet) {
+                    top: inherit;
+                }
             }
             &:nth-child(3) {
                 top: 520px;
+                @include respond-to($tablet) {
+                    top: inherit;
+                }
             }
             &:nth-child(4) {
                 top: 400px;
+                @include respond-to($tablet) {
+                    top: inherit;
+                }
             }
 
-            .btm-menu {
+            .btn-menu {
                 display: inline-block;
-                transition: all .2s;
+                transition: opacity .3s, visibility .3s;
                 font-size: 18px;
                 color: #fff;
                 font-family: 'Montserrat', sans-serif;
                 transform: rotate(-90deg);
                 margin-left: 25px;
+                opacity: 0;
+                visibility: hidden;
+                @include respond-to($tablet) {
+                    transform: rotate(0deg);
+                    opacity: 1;
+                    visibility: visible;
+                    text-align: right;
+                }
+
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
+
+                }
 
                 span {
                     display: inline-block;
@@ -67,6 +118,16 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        transform: translateY(-50%);
+        @include respond-to($lg-1420-max) {
+            margin-bottom: 0;
+        }
+        @include respond-to($tablet) {
+            position: relative;
+            margin: 0 20px;
+            transform: translateY(-40%);
+        }
+
     }
 
 
@@ -81,6 +142,9 @@
             font-size: 32px;
             color: #001b48;
             margin-bottom: 80px;
+            //position: absolute;
+            //top: -155px;
+            padding: 0 20px;
         }
         @include respond-to($xs-max) {
             font-size: 23px;
@@ -97,9 +161,6 @@
             width: 100%;
             @include respond-to($tablet) {
                 max-width: 600px;
-            }
-            @include respond-to($xs-max) {
-               max-width: 275px;
             }
         }
 

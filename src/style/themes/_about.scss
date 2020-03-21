@@ -9,7 +9,7 @@
         position: relative;
     }
     @include respond-to($xs-max) {
-        padding: 35px 20px 0;
+        padding: 47px 20px 0;
     }
 
     &:after {
@@ -45,9 +45,10 @@
             @include respond-to($tablet) {
                 position: relative;
                 z-index: 20;
+                font-size: 18px;
             }
             @include respond-to($xs-max) {
-                margin-bottom: 35px;
+                margin-bottom: 10px;
             }
 
 
@@ -74,7 +75,9 @@
                 width: 100%;
                 position: relative;
                 z-index: 10;
-                padding: 20px 20px 40px;
+                padding-bottom: 45px;
+                padding-top: 30px;
+                //padding: 20px 20px 40px;
             }
 
             &:before {
@@ -150,6 +153,7 @@
                         margin: 0 auto;
                         left: 0;
                         width: 100%;
+                        top: -8%;
                     }
 
 
@@ -183,9 +187,12 @@
                     }
                     @include respond-to($tablet) {
                         text-align: center;
-                        margin-top: 20px;
+                        margin-top: 17px;
                         margin-bottom: 25px;
                         min-height: 0;
+                        padding: 0 20px;
+                        line-height: 1.2;
+                        font-size: 18px;
                     }
                 }
 
@@ -241,7 +248,7 @@
             @include respond-to($tablet) {
                 color: #0a1f32;
                 margin-bottom: 35px;
-                font-size: 22px;
+                font-size: 19px;
             }
         }
         &-wrap {
@@ -300,7 +307,8 @@
                     @include respond-to($tablet) {
                         margin-bottom: 20px;
                         font-size: 18px;
-                        height: 55px;
+                        height: 64px;
+                        text-align: center;
                     }
                 }
 

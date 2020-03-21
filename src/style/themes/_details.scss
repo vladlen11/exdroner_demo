@@ -3,6 +3,7 @@
         background: #869ec1;
     }
     .head {
+        background: #acc1d4;
         @include respond-to($tablet) {
             background: #869ec1;
         }
